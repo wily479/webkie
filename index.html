@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Biodata Diri</title>
+    <style>
+        /* Gaya Umum */
+        body {
+            background-image: url('backroud.jpg');
+            background-size: cover;
+            background-position: center;
+            background-attachment: fixed;
+            font-family: 'Roboto', sans-serif;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            color: #333;
+        }
+
+        /* Kontainer */
+        .container {
+            display: flex;
+            align-items: flex-start;
+            justify-content: space-between;
+            gap: 20px;
+            background: rgba(255, 255, 255, 0.425);
+            padding: 30px;
+            border-radius: 15px;
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.3);
+            max-width: 700px;
+            width: 90%;
+            animation: fadeIn 1s ease-in-out;
+        }
+
+        /* Animasi */
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        /* Gambar */
+        .image img {
+            width: 150px;
+            height: 150px;
+            object-fit: cover;
+            border-radius: 50%;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        }
+
+        .image img:hover {
+            transform: scale(1.1);
+            transition: transform 0.3s ease;
+        }
+
+        /* Biodata */
+        .biodata h2 {
+            font-size: 28px;
+            margin-bottom: 20px;
+            color: #0056b3;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            border-bottom: 3px solid #03a9f4;
+            display: inline-block;
+            padding-bottom: 5px;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+
+        th {
+            text-align: left;
+            padding: 10px;
+            font-weight: 600;
+            color: #1a35ff;
+            width: 150px;
+        }
+
+        td {
+            padding: 10px;
+            color: #1a35ff;
+        }
+
+        table tr:nth-child(odd) {
+            background-color: rgba(0, 169, 244, 0.1);
+        }
+
+        table tr:nth-child(even) {
+            background-color: rgba(0, 169, 244, 0.05);
+        }
+
+        table tr:hover {
+            background-color: rgba(255, 255, 255, 0.371);
+            transition: background-color 0.3s ease;
+        }
+
+        /* Tata Letak */
+        .biodata {
+            flex: 1;
+        }
+
+        .image {
+            flex-shrink: 0;
+        }
+
+        /* Media Queries */
+        @media (max-width: 768px) {
+            .container {
+                flex-direction: column;
+                align-items: center;
+                padding: 20px;
+            }
+
+            .biodata {
+                text-align: center;
+            }
+
+            .image {
+                margin-top: 20px;
+            }
+
+            table {
+                text-align: center;
+            }
+
+            th, td {
+                text-align: center;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <!-- Biodata -->
+        <div class="biodata">
+            <h2>Biodata Diri</h2>
+            <table>
+                <tr>
+                    <th>Nama</th>
+                    <td>Wilyam Kie</td>
+                </tr>
+                <tr>
+                    <th>Tanggal Lahir</th>
+                    <td>17 Mei 2004</td>
+                </tr>
+                <tr>
+                    <th>Alamat</th>
+                    <td>Jln. Suasa Kota Bangun</td>
+                </tr>
+                <tr>
+                    <th>Jenis Kelamin</th>
+                    <td>Laki-laki</td>
+                </tr>
+                <tr>
+                    <th>Email</th>
+                    <td>kiewilyam@gmail.com</td>
+                </tr>
+            </table>
+        </div>
+
+        <!-- Gambar -->
+        <div class="image">
+            <img src="foto.jfif" alt="Foto Profil">
+        </div>
+    </div>
+</body>
+</html>
